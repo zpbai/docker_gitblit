@@ -46,6 +46,7 @@
 					<version>2.2</version>
 					<configuration>
 						<path>/helloworld</path>
+						<port>9999</port> 
 					</configuration>
 				</plugin>			
 				<plugin>
