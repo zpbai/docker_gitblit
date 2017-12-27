@@ -1,0 +1,6 @@
+#org.jbehave.core.embedder.StoryManager
+#Wed Dec 27 16:14:02 CST 2017
+HelloWorld.story=0
+threads=1
+total=0
+threadAverage=0
