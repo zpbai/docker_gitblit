@@ -25,7 +25,7 @@ public class JbehaveMain extends JUnitStories {
 	
 	@Override
 	public Configuration configuration() {
-		System.setProperty("webdriver.gecko.driver", "D:/Software/file/geckodriver.exe");
+		//System.setProperty("webdriver.gecko.driver", "D:/Software/file/geckodriver.exe");
 		return new MostUsefulConfiguration()
 				.useStoryControls(new StoryControls().doDryRun(false))
 				.useStoryLoader(new LoadFromClasspath(this.getClass()))
