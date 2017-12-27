@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Talend.Get.Geckodriver" default="get.geckodriver" basedir=".">
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+		<classpath>
+			<pathelement location="${ant.libs}/ant-contrib-0.6.jar" />
+		</classpath>
+	</taskdef>
+	<target name="get.geckodriver">
+		<available file="geckodriver-v0.19.1-linux64.tar.gz" property="is.geckodriver.existed" />
+		<if>
+			<equals arg1="${is.geckodriver.existed}" arg2="true" />
+			<then>
+				<echo>is.geckodriver.existed - ${is.geckodriver.existed} </echo>
+			</then>
+			<else>
+				<get dest="geckodriver-v0.19.1-linux64.tar.gz" src="https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux64.tar.gz" />
+			</else>
+		</if>
+		<untar src="geckodriver-v0.19.1-linux64.tar.gz" dest="." compression="gzip"/>
+	</target>
+</project>
